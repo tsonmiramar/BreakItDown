@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 7, 2016, 1:48:53 PM
+    Author     : Son Do
+*/
+/* Typography */
+.main-title{
+    border: 1px solid yellow;
+}
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #8a8e91;
+}
+
+.slogan {
+	font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+	position: relative;
+	margin: 10px 0;
+}
+
+.slogan {
+	font-size: 60px;
+}
+
+h2 {
+	font-size: 48px;
+}
+
+.slogan {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+.light {
+    font-weight: 300;
+}
+.white {
+    color: white;
+}
+.parent{
+    position: relative;
+}
+.child{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+/* Main title */
+.main-title{
+    text-align: center;
+}
+#mainPage.ui-page{
+    background:url("img/header.jpg") center center no-repeat;
+    backgroun-size:cover;
+}
+
+/*Sign in Sign up */
+#Signin, #Signup .ui-page{
+    background:url("img/popup.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+/* content */
+.ui-content{
+    text-align: center;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Break It Down</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="index.css">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+        <!-- Main Page -->
+        <div data-role="page" id="mainPage">
+            <div data-role="main" class="ui-content">    
+                <div class="main-title">
+                    <h3 class="light white slogan">Homework makes you drown?</h3>
+                    <h1 class="white typed slogan"> BREAK IT DOWN </h1>
+                    <a href="#Signin" data-role="button" data-theme="a">Sign in</a>
+                    <a href="#Signup" data-role="button" data-theme="a">Sign up</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SIGN UP PAGE -->
+        <div data-role="page" id="Signup">
+            <div data-role="header">
+                <a href="index.html" data-icon="home" class="ui-btn-left">Home</a>
+                <h1>Sign up</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <form method="post" action="index.html">
+                    <label for="fullname" class="ui-hidden-accessible">Full name</label>
+                    <input type="text" name="fullname" id="fullname" data-clear-btn="true" placeholder="Full name...">
+                    <label for="email" class="ui-hidden-accessible">Email Address</label>
+                    <input type="text" name="email" id="email" data-clear-btn="true" placeholder="Email address...">
+                    <label for="password" class="ui-hidden-accessible">Password</label>
+                    <input type="text" name="password" id="password" data-clear-btn="true" placeholder="Password...">
+                    <label for="repeat-password" class="ui-hidden-accessible">Repeat Password</label>
+                    <input type="text" name="repeat-password" id="repeat-password" data-clear-btn="true" placeholder="Repeat password...">
+                    <input type="reset" value="Clear Text">
+                    <a href="#dashboard" data-role="button">Submit</a>
+                </form>
+            </div>
+            
+        </div>
+        <!-- SIGN IN PAGE -->
+        <div data-role="page" id="Signin">
+            <div data-role="header">
+                <a href="index.html" data-icon="home" class="ui-btn-left">Home</a>
+                <h1>Sign in</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content">
+                <form method="post" action="index.html">
+                    <label for="emailSignin" class="ui-hidden-accessible">Email Address</label>
+                    <input type="text" name="emailSignin" id="emailSignin" data-clear-btn="true" data-corners="true" placeholder="Email address...">
+                    <label for="passwordSignin" class="ui-hidden-accessible">Password</label>
+                    <input type="text" name="passwordSignin" id="passwordSignin" data-clear-btn="true" data-corners="true" placeholder="Password...">
+                    <label for="reset" class="ui-hidden-accessible">reset</label>
+                    <input type="reset" value="Clear Text">
+                    <label for="submit" class="ui-hidden-accessible">submit</label>
+                    <a href="#dashboard" data-role="button" id="submit">Submit</a>
+                </form>
+            </div> 
+        </div>
+        <!--MAIN DASHBOARD PAGE -->
+        <div data-role="page" id="dashboard">
+            <!-- USER PANEL -->
+            <div data-role="panel" id="userPanel">
+                <h3>Welcome, CURRENT USER</h3>
+                <ul data-role="listview" data-inset="true" data-shadow="false">
+                    <li><a href="#addTask">Add new assignment</a></li>
+                    <li><a href="#">View all my classes</a></li>
+                </ul>
+            </div>
+            <!-- main page start here -->
+            <div data-role="header"> 
+                <a href="#userPanel" data-icon="grid">User Panel</a>
+                <h1>My Task</h1>
+                <a href="#" data-icon="gear">Setting</a>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#">Daily</a></li>
+                        <li><a href="#">Weekly</a></li>
+                        <li><a href="#">Monthly</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="main" class="ui-content">
+                <h1>Welcome back, <span>CURRENT USER</span></h1>
+                <h1>Today you have <span>1</span> task to finish</h1>
+            </div>
+        </div>
+        
+        
+        
+        
+        <!-- DIALOGS -->
+        <div data-role="page" data-dialog="true" id="addTask">
+            <div data-role="header">
+                <h1>New Assignment</h1>               
+            </div>
+            <div data-role="main" class="ui-content">
+                <form method="post" action="index.html">
+                    <label for="courseName" class="ui-hidden-accessible"></label>
+                    <input type="text" name="courseName" id="courseName" data-clear-btn="true" data-corners="true" placeholder="Enter your course's name...">
+                    <label for="assignmentName" class="ui-hidden-accessible"></label>
+                    <input type="text" name="assignmentName" id="assignmentName" data-clear-btn="true" data-corners="true" placeholder="Enter the assignment's name...">
+                    <label for="dueDate" class="ui-hidden-accessible"></label>
+                    <textarea rows="6" cols="50" data-clear-btn="true" placeholder="Comments for the assignment(Optional)...."></textarea>
+                    <label for="reset" class="ui-hidden-accessible"></label>
+                    <input type="reset" value="Clear Text">
+                    <label for="submit" class="ui-hidden-accessible">submit</label>
+                    <a href="#dashboard" data-role="button" id="submit">Submit</a>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
